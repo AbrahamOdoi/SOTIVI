@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+		<title>Sliding Menu Panel</title>
+
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+		<!-----SLIDING PANEL HEIGHT ADJUST TO DOCUMENT HEIGHT----->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#menu").height($(document).height());
+				$('#menu').css('left', '0px');
+			});
+		</script>
+
+		<!-----SLIDING PANEL DELAY AND HIDE----->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				setTimeout(function() {
+					$('#menu').css('left', '-130px');
+				}, 1);
+			});
+		</script>
+
+	</head>
+
+	<body>
+
+		<div data-role="page" data-theme="b"  data-url="panel-fixed-page1">
+
+			<div data-role="header" data-theme="a" data-fullscreen='true' data-shadow='true' class="header">
+				        <img src="img/nalo logo copy.png" class="img_logo"/>
+				<img src="img/search.PNG" class="img_search"/>
+<br />
+<br />
+
+				<div id="menu">
+					<div class="arrow">
+						&nbsp;>>
+					</div>
+					<nav class="nav">
+						<p>CHANNELS<p>
+						<p><img src="icon/channel.PNG" /></p>
+						<p>RECOMMENDED</p>
+						<p>Relevant figures in design</p>
+						<p>Where is design heading?</p>
+						<p>Influences</p>
+						<p>Video</p>
+						<p>Sources</p>
+					</nav>
+				</div>
+			</div>
+
+			 
+			<div data-role="content" class="jqm-content">
+				        <h1>Panels</h1>
+				        <h2>Fixed positioning</h2>
+				        
+				<p>
+					This is a typical page that has two buttons in the header bar that open panels. The left panel has the reveal display mode. The right panel opens as overlay. For both panels we set
+					<code>
+						data-position-fixed="true"
+					</code>
+					. We also set position fixed for the header and footer on this page.
+				</p>
+
+				    
+			</div><!-- /content -->
+
+			<!-- <div data-role="footer" data-position="fixed" data-theme="a">
+			        <h4>Fixed footer</h4>
+			    
+			</div><!-- /footer --> -->
+
+		</div>
+	</body>
+</html>
